@@ -51,7 +51,7 @@ We recommended to keep this folder structure.
 #### 1. Create directory & Download required files & Copy .env file
     mkdir /opt/seatable-compose && \
     cd /opt/seatable-compose && \
-    wget -c https://github.com/seatable/seatable-release/releases/latest/download/seatable-compose.tar.gz \
+    wget -c https://github.com/seatable/seatable-release/releases/download/v4.2.11/seatable-compose.tar.gz \
     -O - | tar -xz -C /opt/seatable-compose && \
     cp -n .env-release .env
 
