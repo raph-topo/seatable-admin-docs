@@ -23,15 +23,13 @@ pw=$(pwgen -s 40 1) && echo "Generated shared secret: ${pw}"
 Execute the following command to add the shared secret to the `.env` file:
 
 ```bash
-echo "\n# python-pipeline" >> /opt/seatable-compose/.env
 echo "PYTHON_SCHEDULER_AUTH_TOKEN=${pw}" >> /opt/seatable-compose/.env
 ```
 
 Now execute this command to add the required configuration to `dtable_web_settings.py`:
 
 ```bash
-echo "\n# python-pipeline" >> /opt/seatable-server/seatable/conf/dtable_web_settings.py
-echo "SEATABLE_FAAS_URL = 'http://python-scheduler'" >> /opt/seatable-server/seatable/conf/dtable_web_settings.py
+echo "SEATABLE_FAAS_URL = 'http://seatable-python-scheduler'" >> /opt/seatable-server/seatable/conf/dtable_web_settings.py
 echo "SEATABLE_FAAS_AUTH_TOKEN = '${pw}'" >> /opt/seatable-server/seatable/conf/dtable_web_settings.py
 ```
 
