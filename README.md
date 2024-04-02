@@ -6,7 +6,7 @@ This repository serves as the foundational source for the SeaTable Admin Manual 
 
 This repository contains the SeaTable Admin documentation. The documentation is built using , a fast and simple static site generator. The pages are being built using Github workflows and hosted on Github Pages.
 
-## Content of the Admin Docs
+### Content of the Admin Docs
 
 - Installation
 - Configuration
