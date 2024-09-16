@@ -18,8 +18,11 @@ Create a `Dockerfile`:
 # You can find the latest tag here: https://hub.docker.com/r/seatable/seatable-python-runner/tags
 FROM seatable/seatable-python-runner:4.0.1
 
+USER root
+RUN pip install --no-cache-dir --upgrade pip
+
 # Install your packages with pip
-RUN pip install --no-cache-dir --user pyaml
+RUN pip install --no-cache-dir pyaml
 ```
 
 Build your image and specify a tag using `-t`:
