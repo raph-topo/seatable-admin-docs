@@ -20,6 +20,7 @@ FROM seatable/seatable-python-runner:4.0.1
 
 USER root
 RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir seatable_api
 
 # Install your packages with pip
 RUN pip install --no-cache-dir pyaml
